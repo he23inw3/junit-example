@@ -1,6 +1,6 @@
 spring:
   application:
-    name: Docker-Test
+    name: JUnit-Example
   main:
     banner-mode: off
   datasource:
