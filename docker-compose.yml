@@ -19,7 +19,7 @@ services:
       - ./config/mysql/sql:/docker-entrypoint-initdb.d
     ports:
       - "3306:3306"
-  flyway-clean-migrate:
+  flyway:
     container_name: test-flyway
     image: boxfuse/flyway:5.1.4
     depends_on:
