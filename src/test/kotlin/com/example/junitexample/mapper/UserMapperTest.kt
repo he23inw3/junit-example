@@ -107,7 +107,7 @@ class UserMapperTest {
 			// setup
 			val before = jdbcTemplate.queryForObject("SELECT COUNT(*) FROM TBL_USER;", Int::class.java)
 			assertEquals(before, 4)
-			val u001 = UserRecord(
+			val u003 = UserRecord(
 				id = "U003",
 				name = "UPDATED_USER03",
 				age = 23,
@@ -117,7 +117,7 @@ class UserMapperTest {
 			)
 
 			// execute
-			testSuite.update(u001)
+			testSuite.update(u003)
 
 			// verify
 			val actual = jdbcTemplate.queryForObject("SELECT * FROM TBL_USER WHERE ID = ?;", TblUserRowMapper(), "U003")
